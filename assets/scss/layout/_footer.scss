@@ -1,0 +1,110 @@
+.footer{
+    background-color: #f2f2f2;
+    color: #000;
+    padding: 72px 34px 36px;
+    .upper{
+        display: flex;
+        justify-content: space-between;
+        @include tablet{
+            flex-direction: column;
+        }
+        .left-col{
+            display: flex;
+            flex-direction: column;
+            .title{
+                margin-bottom: 20px;
+                font-size: 2.25rem;
+                @include mobile{
+                    font-size: 1.75rem;
+                }
+            }
+            .txt{
+                font-size: 1.25rem;
+                a{
+                    text-decoration: underline;
+                }
+                @include mobile{
+                    font-size: 1rem;
+                }
+            }
+            .currencySelector{
+                margin-top: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 14px 34px 14px 28px;
+                background-color: #fff;
+                border: 1px solid hsla(240,0%,50%,.5);
+                border-radius: 34px;
+                @include tablet{
+                    margin: 10px 0;
+                }
+                .icon-wrap{
+                    width: 14px;
+                    height: 9px;
+                }
+            }
+        }
+        .right-col{
+            margin-right: 44px;
+            display: flex;
+            gap: 20px;
+            font-size: 1.5rem;
+            @include tablet{
+                flex-direction: column;
+            }
+            .list{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+    .downer{
+        margin-top: 70px;
+        display: flex;
+        font-size: 0.75rem;
+        @include tablet{
+            flex-direction: column;
+            gap: 20px;
+        }
+        .legal-list{
+            flex: 9;
+            display: flex;
+            gap: 24px;
+            @include tablet{
+                flex-direction: column;
+            }
+            .legal-item{
+                flex: 1;
+            }
+        }
+        .sns-list{
+            flex: 1;
+            display: flex;
+            gap: 25px;
+            @include tablet{
+                gap: 20px;
+            }
+            .sns-item{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                @include tablet{
+                    flex: 0;
+                }
+                a{
+                    .icon-wrap{
+                        height: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        margin-top: 30px;
+        opacity: .28;
+        font-size: 0.75rem;
+    }
+}

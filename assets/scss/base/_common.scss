@@ -1,0 +1,233 @@
+.blind{
+    position: absolute;
+    width: 1px;height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+
+.BuyBtn{
+    position: relative;
+    padding: 13px 22px;
+    border-radius: 5px;
+    background-color: #ffb500;
+    transition: .3s;
+    span{
+        font-weight: 500;
+        position: relative;
+        z-index: 1;
+        color: #000;
+        transition: color .6s cubic-bezier(.19,1,.22,1);
+    }
+    &::before{
+        position: absolute;
+        top: 50%;
+        left: -2px;
+        z-index: 1;
+        width: 2px;
+        height: 1rem;
+        background-color: #0e0e0e;
+        transform: translateY(-50%);
+        opacity: 1;
+        content: "";
+    }
+    &::after{
+        position: absolute;
+        right: -2px;
+        top: 50%;
+        z-index: 1;
+        width: 2px;
+        height: 1rem;
+        background-color: #0e0e0e;
+        transform: translateY(-50%);
+        opacity: 1;
+        content: "";
+    }
+    &:hover{
+        background-color: transparent;
+        outline: 1px solid #ffb500;
+        span{
+            color: #fff;
+        }
+    }
+}
+
+.icon-area{
+    display: flex;
+    gap: 8px;
+    .icon-wrap{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+.icon-wrap{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    svg{
+        position: absolute;
+        top: 0;
+        transition: opacity 0.3s ease;
+    }
+    .initial{
+        opacity: 1;
+    }
+    .active{
+        opacity: 0;
+    }
+    &:hover{
+        .initial{
+            opacity: 0;
+        }
+        .active{
+            opacity: 1;
+        }
+    }
+}
+.serial{
+    width: 7px;
+    height: 13px;
+}
+
+.group-title{
+    position: relative;
+    z-index: 1;
+    margin: 0 auto -3vh;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    @include tablet{
+        width: 90%;
+    }
+    h2{
+        font-size: 4.125rem;
+        margin-bottom: 40px;
+        @include tablet{
+            font-size: 2rem;
+        }
+    }
+    span{
+        font-size: 1.25rem;
+    }
+    .img-wrap{
+        margin: 0 auto;
+        width: 60%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.group-thumnail{
+    padding: 0 2vw;
+    .thumnail-area{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        &:hover{
+            .playBtn{
+                display: none;
+            }
+        }
+        .playBtn{
+            position: absolute;
+            z-index: 1;
+            .icon-wrap{
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .img-wrap{
+            position: relative;
+            @include tablet{
+                width: 100%;
+            }
+            .videoBtn{
+                position: absolute;
+                top: 0;bottom: 0;
+                left: 0;right: 0;
+            }
+        }
+    }
+}
+.group-quote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    span{
+        margin-top: 60px;
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
+    p{
+        font-size: 2rem;
+        width: 600px;
+        font-weight: normal;
+        font-family: $font-RealHeadOffc-Light;
+        @include tablet{
+            width: 100%;
+            font-size: 1.438rem;
+            padding: 0 40px;
+        }
+    }
+    .name{
+        font-size: 0.875rem;
+        .lightweight{
+            font-size: 0.875rem;
+            font-weight: normal;
+        }
+    }
+}
+
+.info-num{
+    display: flex;
+    align-items: center;
+    .num1{
+        display: flex;
+        margin-right: 6px;
+        align-items: flex-end;
+        .icon-wrap{
+            width: 7px;
+            height: 13px;
+            margin-right: 6px;
+            &:nth-child(2){
+                margin-right: 4px;
+                width: 10px;
+                height: 15px;
+            }
+            &:nth-child(3){
+                margin-right: 4px;
+                width: 10px;
+                height: 15px;
+            }
+        }
+    }
+    .num2{
+        margin-right: 2px;
+        .icon-wrap{
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .num3{
+        display: flex;
+        margin-left: 2px;
+        .icon-wrap{
+            width: 10px;
+            height: 15px;
+            margin-left: 2px;
+            &:nth-child(2){
+                margin-left: 2px;
+            }
+        }
+    }
+}

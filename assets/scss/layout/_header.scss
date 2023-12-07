@@ -1,0 +1,98 @@
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 90;
+    .header-upper{
+        height: 70px;
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        color: #000;
+        transition: .5s ease;
+        font-family: $font-RealHeadOffc-Demibold;
+        h1{
+            width: 130px;
+            a{
+                .icon-wrap{
+                    width: 100%;
+                }
+            }
+            @include tablet{
+                margin: 0 auto;
+            }
+        }
+        .gnb-list{
+            display: flex;
+            font-weight: bold;
+            gap: 28px;
+            @include tablet{
+                display: none;
+            }
+        }
+        .util-list{
+            display: flex;
+            gap: 24px;
+            .util-item{
+                a{
+                    .icon-wrap{
+                        width: 22px;
+                    }
+                }
+                &:nth-child(2){
+                    @include tablet{
+                        display: none;
+                    }
+                }
+                &:nth-child(3){
+                    @include tablet{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .navigator{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 70px;
+        padding: 17px 1rem;
+        background: #000;
+        font-weight: bold;
+        transition: .5s ease;
+        .partnerstores{
+            a{
+                display: flex;
+                gap: 8px;
+                .icon-wrap{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            @include tablet{
+                display: none;
+            }          
+        }
+        .swiper{
+            width: 40%;
+            height: 100%;
+            -webkit-mask-image: linear-gradient(90deg,transparent -10%,#0e0e0e,#0e0e0e,transparent 110%);
+            &-slide{
+                a{
+                    display: flex;
+                    font-size: 1.125rem;
+                }
+                // &.act{
+                //     p{
+                //         color: #ffb500;
+                //     }
+                // }
+            }
+            @include tablet{
+                display: none;
+            }
+        }
+    }
+}

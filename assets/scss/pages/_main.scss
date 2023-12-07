@@ -1,0 +1,941 @@
+.sc-visual{
+    height: 100vh;
+    position: relative;
+    .video-wrap{
+        width: 100%;
+        height: 100%;
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 113px;
+        background: linear-gradient(0deg,#0e0e0e,hsla(0,0%,5%,0));
+        content: "";
+    }
+}//.sc-visual
+.sc-reveal{
+    width: 100%;
+    margin-top: 100px;
+    @include tablet{
+        padding: 0 20px;
+    }
+    .group-info{
+        width: 45rem;
+        margin: 0 auto;
+        padding: 0;
+        @include tablet{
+            width: 100%;
+        }
+        .revealtxt{
+            font-size: 2.25rem;
+            font-weight: bold;
+            opacity: .3;
+            transition: .3s;
+            color: hsla(0,0%,100%,.3);
+
+            background-image: linear-gradient(105deg,#fff,#fff 33.33%,hsla(0,0%,100%,0) 66.67%,hsla(0,0%,100%,0));
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            background-position-x: 100%;
+            background-size: 300% 100%;
+
+            @include tablet{
+                font-size: 1.438rem;
+                width: 100%;
+            }
+        }
+        .group-btn{
+            margin-top: 50px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            @include tablet{
+                width: 100%;
+                font-size: 0.875rem;
+            }
+        }
+    }
+}//.sc-reveal
+.sc-polaroidTop{
+    position: relative;
+    .polaroidTop{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+        .left-light{
+            position: absolute;
+            top: 15vh;
+            left: -30%;
+            width: 50vw;
+            height: 40%;
+            background: radial-gradient(closest-side,#d0a549,orange,brown);
+            border-radius: 50%;
+            filter: blur(100px);
+            mix-blend-mode: lighten;
+            transform: translateX(0%) translateY(0%) rotate(0deg) translateZ(0px);
+        }
+        .right-light{
+            position: absolute;
+            top: 50vh;
+            right: -15%;
+            width: 30vw;
+            height: 35%;
+            background: radial-gradient(closest-side,#d0a549,orange,brown);
+            border-radius: 50%;
+            filter: blur(100px);
+            mix-blend-mode: lighten;
+            transform: translateX(20%) translateY(0vh) rotate(0deg) translateZ(0px);
+        }
+        .group-desc{
+            position: absolute;
+            top: 0;
+            //transform: translateY(-50%);
+            left: 60%;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            text-align: left;
+            display: flex;
+            @include tablet{
+                width: 100%;
+                right: 0;
+                text-align: center;
+                height: 150px;
+                padding: 0 20px;
+            }
+            .desc-wrap{
+                width: 35rem;
+                align-items: flex-start;
+                margin: 0;
+                text-align: left;
+                @include tablet{
+                    width: 100%;
+                }
+                span{
+                    color: #ff8200;
+                    font-size: 0.875rem;
+                }
+                h2{
+                    margin-top: 35px;
+                    font-size: 4.875rem;
+                    @include tablet{
+                        width: 100%;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}//.sc-polaroidTop
+.sc-photoTypes{
+    height: 500vh;
+    position: relative;
+    padding-bottom: 100vh;
+    .group-photos{
+        position: sticky;
+        top: 10%;
+        margin-bottom: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .photos{
+            position: absolute;
+            top: 0;
+            width: 30%;
+            &.kotori{
+                z-index: 2;
+            }
+            &.max{
+                opacity: 0;
+                z-index: 1;
+            }
+            &.coco{
+                opacity: 0;
+            }
+            @include tablet{
+                width: 80%;
+            }
+        }
+        .group-title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            .icon-wrap{
+                width: 25px;
+                height: 25px;
+            }
+            span{
+                font-size: 1.563rem;
+            }
+        }
+        .group-image{
+            transform: rotate(-2.53598deg) translateZ(0px);
+            .info-area{
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                .photo-info{
+                    font-size: 0.875rem;
+                    color: #808081;
+                }
+            }
+        }
+    }
+    .exploreBtn{
+        display: flex;
+        gap: 8px;
+        position: absolute;
+        bottom: 180px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}//.sc-photoTypes
+.sc-cocoCaptain{
+    position: relative;
+    width: 100%;
+    .group-quote{
+        position: relative;
+        z-index: 2;
+    }
+}//.sc-cocoCaptain
+.sc-polaroidFace{
+    .inner{
+        position: relative;
+        height: 600vh;
+        width: 100%;
+        .polaroidFace{
+            width: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            .desc-wrap{
+                position: absolute;
+                width: 100%;
+                z-index: 1;
+                top: 8%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                opacity: 0;
+                span{
+                    color: #198cd9;
+                    font-size: 1.25rem;
+                    margin-bottom: 35px;
+                    @include tablet{
+                        font-size: 0.875rem;
+                    }
+                }
+                h2{
+                    font-size: 5.563rem;
+                    text-align: center;
+                    @include tablet{
+                        width: 100%;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+        .Polaroid-desc{
+            position: absolute;
+            z-index: 2;
+            bottom: 10%;
+            left: 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            p{
+                width: 45%;
+                font-size: 2.25rem;
+                @include tablet{
+                    width: 100%;
+                    font-size: 1.438rem;
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+}//.sc-polaroidFace
+.sc-craftLight{
+    position: relative;
+    height: 200vh;
+    width: 100%;
+    overflow: hidden;
+    .group-img{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        .area-img{
+            width: 35%;
+            height: 25%;
+            .img-wrap{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .img-desc{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+        }
+    }
+    .group-desc{
+        opacity:1;
+        filter: blur(0px);
+        position: absolute;
+        top: 20%;
+        z-index: 1;
+        width: 100%;
+        .desc-wrap{
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            span{
+                color: #d60026;
+                font-size: 1.25rem;
+                margin-bottom: 34px;
+                @include tablet{
+                    font-size: 0.875rem;
+                    padding: 0 20px;
+                }
+            }
+            h2{
+                width: 50%;
+                font-size: 5.563rem;
+                @include tablet{
+                    width: 100%;
+                    font-size: 2rem;
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+    .group-text{
+        transform: translate(0%, 0%);
+        opacity: 1;
+        .craftLighttxt{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            width: 35%;
+            @include tablet{
+                width: 100%;
+            }
+            p{
+                font-size: 2.25rem;
+                @include tablet{
+                    font-size: 1.438rem;
+                }
+            }
+            .icon-area{
+                margin-top: 35px;
+            }
+        }
+    }
+}//.sc-craftLight
+.sc-maxSiedentopf{
+    position: relative;
+    width: 100%;
+}
+.sc-polaroidBack{
+    margin-top: 360px;
+    position: relative;
+    .polaroidBack{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .desc-wrap{
+        width: 100%;
+        position: absolute;
+        top: -200px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        span{
+            color: #ffb500;
+            font-size: 1.25rem;
+            margin-bottom: 35px;
+            @include tablet{
+                font-size: 0.875rem;
+            }
+        }
+        h2{
+            font-size: 5.563rem;
+            text-align: center;
+            width: 50%;
+            @include tablet{
+                width: 100%;
+                font-size: 2rem;
+                padding: 0 20px;
+            }
+        }
+    }
+    .Polaroid-desc{
+        position: absolute;
+        z-index: 2;
+        bottom: 10%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        p{
+            width: 45%;
+            font-size: 2.25rem;
+            @include tablet{
+                width: 100%;
+                padding: 0 28px;
+                font-size: 1.438rem;
+            }
+        }
+    }
+}
+.sc-camera3dMotion{
+    position: relative;
+    .desc-wrap{
+        position: absolute;
+        width: 100%;
+        top: -200px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        span{
+            color: #78be20;
+            font-size: 1.25rem;
+            margin-bottom: 35px;
+            @include tablet{
+                font-size: 0.875rem;
+            }
+        }
+        h2{
+            font-size: 5.563rem;
+            text-align: center;
+            width: 50%;
+            @include tablet{
+                width: 100%;
+                font-size: 2rem;
+                padding: 0 20px;
+            }
+        }
+    }
+    .Craft{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .group-text{
+        position: absolute;
+        z-index: 2;
+        bottom: 10%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+        @include tablet{
+            width: 100%;
+            padding: 0 28px;
+        }
+        .Polaroid-desc{
+            p{
+                font-size: 2.25rem;
+                @include tablet{
+                    font-size: 1.438rem;
+                }
+            }
+        }
+        .group-btn{
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            .thumnail-area{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                border: 1px solid #fff;
+                border-radius: 6px;
+                .icon-wrap{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    z-index: 1;
+                    width: 10px;
+                    height: 12px;
+                }
+                .img-wrap{
+                    width: 100px;
+                    height: 100px;
+                    img{
+                        width: 100%;
+                        height: 100%;object-fit: cover;
+                    }
+                }
+            }
+            .watchStory{
+                display: flex;
+                flex-direction: column;
+                margin-left: 15px;
+                .eyebrow{
+                    margin-bottom: 8px;
+                    color: #78be20;
+                }
+                .title{
+                    width: 150px;
+                }
+            }
+        }
+    }
+}//.sc-camera3dMotion
+.sc-Film{
+    position: relative;
+    height: 300vh;
+    .group-film{
+        position: sticky;
+        top: 0%;
+        display: flex;
+        flex-direction: column;
+        .film-area{
+            height: 120vh;
+            overflow: hidden;
+            padding-top: 10%;
+        }
+        .desc-wrap{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            span{
+                color: #ff8200;
+                font-size: 1.25rem;
+                margin-bottom: 35px;
+                @include tablet{
+                    font-size: 0.875rem;
+                }
+            }
+            h2{
+                font-size: 5.563rem;
+                text-align: center;
+                width: 50%;
+                @include tablet{
+                    width: 100%;
+                    font-size: 2rem;
+                    padding: 0 28px;
+                }
+            }
+        }
+        .group-img{
+            height: 150vh;
+            .img-wrap{
+                position: relative;
+                width: 30%;
+                margin: 0 auto;
+                .bg{
+                    position: absolute;
+                    top: 0;bottom: 0;
+                    left: 0;right: 0;
+                    background: #fff;
+                    opacity: .88;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    .Polaroid-desc{
+        margin-top: 70px;
+        z-index: 2;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        p{
+            width: 45%;
+            font-size: 2.25rem;
+            @include tablet{
+                width: 100%;
+                font-size: 1.438rem;
+                padding: 0 28px;
+            }
+        }
+    }
+}//.sc-Film
+.sc-photographers{
+    margin-top: 340px;
+    position: relative;
+    .desc-wrap{
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        span{
+            color: #ffb500;
+            font-size: 1.25rem;
+            margin-bottom: 35px;
+            @include tablet{
+                font-size: 0.875rem;
+                padding: 0 28px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+        }
+        h2{
+            font-size: 5.563rem;
+            text-align: center;
+            width: 50%;
+            @include tablet{
+                width: 80%;
+                font-size: 2rem;
+                padding: 0 28px;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+        }
+    }
+    .group-InFocus{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        width: 100%;
+        .FocusOn{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            @include tablet{
+                flex-direction: column;
+                width: 100%;
+                height: 80vh;
+            }
+            .Photos{
+                flex: 2;
+                width: 100%;
+                height: 600px;
+                position: relative;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .photos-wrap{
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    @include mobile{
+                        width: 270px;
+                        height: 300px;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                    &.left{
+                        transform: translate(-10%, 7.67932px) rotate(-0.72377deg);
+                    }
+                    &.middle{
+                        transform: translate(0%, -3.86781px) rotate(0.27623deg);
+                        z-index: 1;
+                    }
+                    &.right{
+                        transform: translate(10%, 3.45288px) rotate(1.70717deg);
+                    }
+                }
+            }
+            .Info{
+                flex: 1;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding-right: 200px;
+                @include tablet{
+                    padding-right: 0;
+                }
+                .photographer{
+                    span{
+                        font-size: 1.25rem;
+                        display: block;
+                        color: #198cd9;
+                        margin-bottom: 17px;
+                    }
+                    .img-wrap{
+                        width: 307px;
+                        margin-bottom: 12px;
+                        @include tablet{
+                            width: 160px;
+                        }
+                    }
+                }
+                p{
+                    font-size: 1.438rem;
+                    width: 500px;
+                    margin-bottom: 34px;
+                    @include tablet{
+                        width: 100%;
+                        padding: 0 28px;
+                        font-size: 1.188rem;
+                    }
+                }
+                .SeeBtn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .icon-wrap{
+                        width: 20px;
+                        height: 14px;
+                        margin-right: 8px;
+                    }
+                    span{
+                        @include tablet{
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+            &.Max{
+                .photos-wrap{
+                    &.left{
+                        transform: translate(-10%, -19.0421px) rotate(-0.642529deg);
+                    }
+                    &.middle{
+                        transform: translate(15%, -8.03161px) rotate(1.11916deg);
+                    }
+                    &.right{
+                        transform: translate(0%, 26.5536px) rotate(0.321264deg);
+                        z-index: 1;
+                    }
+                }
+                .photographer{
+                    span{
+                        color: #ffb500;
+                    }
+                }
+            }
+            &.Kotori{
+                .photos-wrap{
+                    &.left{
+                        transform: translate(-10%, 12.1795px) rotate(-2.97436deg);
+                    }
+                    &.middle{
+                        transform: translate(0%, 14.359px) rotate(0.461541deg);
+                        z-index: 1;
+                    }
+                    &.right{
+                        transform: translate(15%, -18.5897px) rotate(1.53846deg);
+                    }
+                }
+                .photographer{
+                    span{
+                        color: #d60026;
+                    }
+                }
+            }
+        }
+    }
+}//.sc-photographers
+.sc-Imperfectionists{
+    margin-top: 170px;
+    margin-bottom: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .group-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 70px;
+        .desc-wrap{
+            h2{
+                text-align: center;
+                font-size: 5.563rem;
+                @include tablet{
+                    font-size: 1.875rem;
+                }
+            }
+        }
+        .group-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            a{
+                span{
+                    font-size: 1rem;
+                }
+            }
+            .compare{
+                display: flex;
+                align-items: center;
+                .icon-wrap{
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    .img-wrap{
+        width: 580px;
+        height: 614px;
+        margin-bottom: 102px;
+        @include mobile{
+            width: 320px;
+        }
+    }
+    .group-sub{
+        display: flex;
+        width: 100%;
+        @include tablet{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        strong{
+            font-size: 2.7rem;
+            text-align: center;
+            @include tablet{
+                font-size: 1.563rem;
+            }
+        }
+        .col-left{
+            width: 50%;
+            padding: 70px 136px 70px 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid #3a3a3a;
+            @include tablet{
+                padding: 0;
+                padding-bottom: 50px;
+                border-right:0;
+                border-bottom:1px solid #3a3a3a;
+            }
+            .more-wrap{
+                margin-top: 34px;
+                a{
+                    display: flex;
+                    gap: 8px;
+                    .icon-wrap{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+        .col-right{
+            width: 50%;
+            padding: 70px 320px 70px 136px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @include tablet{
+                padding: 0;
+                font-size: 0.75rem;
+            }
+            .download-wrap{
+                margin-top: 34px;
+                display: flex;
+                gap: 23px;
+                @include tablet{
+                    justify-content: center;
+                }
+                a{
+                    display: flex;
+                    gap: 8px;
+                    .icon-wrap{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}//.sc-Imperfectionists
+.sc-shop{
+    padding-top: 182px;
+    padding-bottom: 180px;
+    background: #fff;
+    color: #000;
+    h2{
+        padding-left: 70px;
+        margin-bottom: 34px;
+        font-size: 3.25rem;
+        @include mobile{
+            font-size: 1.688rem;
+        }
+    }
+    .swiper{
+        padding-left: 68px;
+        padding-bottom: 10px;
+        height: 100%;
+        &-slide{
+            a{
+                display: flex;
+                flex-direction: column;
+                .img-wrap{
+                    background-color: #e9e9e9;
+                }
+                .prd-info{
+                    margin-top: 25px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .buy{
+                    display: flex;
+                    justify-content: flex-end;
+                    text-decoration: underline;
+                }
+            }
+        }  
+    }
+}
